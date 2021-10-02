@@ -1,5 +1,7 @@
 # Programming with R: Basic & Advanced
 
+This is the workshop I conduct at Clemson University for CITI's workshop series for every semester.
+
 This repository generates the corresponding course website based on the original templates
 from [The Carpentries](https://carpentries.org/).
 
