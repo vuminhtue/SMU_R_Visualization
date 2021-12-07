@@ -80,13 +80,7 @@ os.chdir('/users/tuev/')
 ```
 ## Seeking Help
 In order to look for help files for function:
-* Put `?` in front of function name, for example `rnorm` 
 
-```r
-?rnorm
-help(rnorm)
-str(rnorm)
+```python
+help(numpy.add)
 ```
-The help section will display:
-
-![image](https://user-images.githubusercontent.com/43855029/114055446-c981b200-985e-11eb-8207-1347edd1f62f.png)
