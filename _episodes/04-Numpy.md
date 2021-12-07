@@ -164,3 +164,10 @@ for row,i in enumerate(n):
     print('row', row)
     print('index value', i)
 ```
+
+- Iterate over multiple arrays:
+
+```python
+for i, j in zip(n,n2):
+    print(i,'*',j,'=',i*j)
+```
