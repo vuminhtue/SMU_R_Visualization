@@ -107,3 +107,20 @@ list1[2:4]
 
 tup1[0]
 ```
+
+## Dictionary
+Dictionaries are a different way of storing data than lists. They rely on a key and value system as opposed to the order of the entries.
+Dictionaries are enclosed in curly braces {}, the key and value are separated by a colon : and entries are separated by commas ,
+Values can then be accessed by referencing the key.
+Note that finding dictionary values does not go both ways, so using the value to find the key will cause an error.
+
+
+```python
+MyBook = {"The Silmarillion":130115,
+          "The Hobbit":95506,
+          "The Fellowship of the Ring":187726,
+          "The Two Towers":156147,
+          "The Return of the King":137037}
+          
+MyBook["The Two Towers"]         
+```
