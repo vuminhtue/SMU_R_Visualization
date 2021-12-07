@@ -1,5 +1,5 @@
 ---
-title: "Basic of R"
+title: "Basic of Python"
 teaching: 5
 exercises: 0
 questions:
@@ -7,81 +7,66 @@ questions:
 - "how to initialize a variable"
 - "how to get help"
 objectives:
-- "R built-in function"
+- "Python built-in function"
 keypoints:
-- "Use RStudio to write and run R programs."
-- "R has the usual arithmetic operators and mathematical functions."
-- "Use `<-` to assign values to variables."
-- "Use `ls()` to list the variables in a program."
-- "Use `rm()` to delete objects in a program."
-- "Use `sessionInfo()` to get detail of the current loaded environmemt and packages"
+- "Use Jupyter Notebook as general platform to write and run Python code."
+- "Python has the usual arithmetic operators and mathematical functions."
 ---
 
-## Input to R
-- In R console, the symbol `>` stands for `R prompt`.
-- The `#` is for comment insert.
-- To clean the existing environment, remove all memory in previous sessions:
+## Familiar yourself with Jupyter Notebook
+- How to request for Jupyter Hub from SMU Open OnDemand platform
+- How to use different kernel
 
-```r
-> rm(list=ls())
-```
-
-## Using R as calculator
-When using R as a calculator, the order of operations is the same as you
+## Using Python as calculator
+When using Python as a calculator, the order of operations is the same as you
 would have learned back in school.
 
 From highest to lowest precedence:
 
  * Parentheses: `(`, `)`
- * Exponents: `^` or `**`
+ * Exponents: `**`
  * Multiply: `*`
  * Divide: `/`
  * Add: `+`
  * Subtract: `-`
- * Other math functions: `sin, cos, log1(), log10(), exp`
 
-```r
-a <- (1+2)*3-4^5
-b <- sin(1)+log10(20)*exp(2)
+```python
+a = (1+2)*3-4^5
 ```
 
-## Compare in R
+* Other math functions: `sin, cos, log1(), log10()`
+For other math functions, we should use numpy library
+
+```python
+import numpy as np
+np.sin(1)+np.log10(90)
+```
+
+## Compare in Python
+
 * `==`: equality
 * `!=`: inequality 
 * `<`& `<=`: less than & less than or equal to
 * `>`& `>=`: more than & more than or equal to
 
-```r
+```python
 1==1
+3!=4
+5>4
 ```
 
 ## Assign Variables
-- To assign variable in R, we can use both `<-` and `=` sign
+- To assign variable in Python, we can use `=` sign
 
-```r
-a <- 1
-b = 2
+```python
+a = 1
 ```
-
-Note that assignment does not print out value to R console. It save the variable in Environment section:
-![image](https://user-images.githubusercontent.com/43855029/114053543-09479a00-985d-11eb-965a-88462449ea89.png)
-
 - To print the variable to console
 
-```r
+```python
 a
 print(a)
 ```
-
-The output will be like this:
-
-```r
-> a
-[1] 1
-> print(a)
-[1] 1
-```
-But not to worry about the `[1]` in front. We will be learning about that in the later part
 
 ## Working directory
 One important step in R is to define the working directory. It is particularly useful when you are working with files in the working directory and working in Linux environment in Palmetto:
