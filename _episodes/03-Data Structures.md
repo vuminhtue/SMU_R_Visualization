@@ -27,7 +27,7 @@ In Python, there are 5 main classes of objects:
 * bool: TRUE/FALSE
 
 ```python
-str <- "string1"
+str = "string1"
 type(str)
 a = 5
 type(a)
@@ -36,13 +36,31 @@ type(b)
 c = 6j ** 3
 type(c)
 d = 10 < 5
-class(d)
+type(d)
+```
+
+## Working with string
+
+```python
+strcat = 'cat'
+strcat + strcat
+strcat * 3
+strcat + '_loves dog'
+```
+
+## Math Operation:
+
+```python
+a_quo = a//b #Quotient
+a_mod = a%b #Modulo
+a_pow = a**b #Power / Exponent 
 ```
 
 ## List
 A vector that containts objects from different class is call a `list`
+In python, a list is created using bracket [ ]
 
-```r
+```python
 list1 <- list(str,a,b,c,d)
 list1
 ```
