@@ -60,34 +60,27 @@ a_pow = a**b #Power / Exponent
 A vector that containts objects from different class is call a `list`
 In python, a list is created using bracket [ ]
 
+### A list
+
 ```python
-list1 <- list(str,a,b,c,d)
+list1 = [str,a,b,c,d]
 list1
+type(list1)
 ```
 
-## Number
-* In R, the number is considered as numeric
-```r
-e <- 5
-class(e)
+### Appending/Remove
+Append to a list
+
+```python
+list1.append(a_quo)
 ```
-* To get an integer, insert `L` as suffix
-```r
-f <- 5L
-class(f)
+
+Removing from a list
+
+```python
+list1.remove(a_quo)
 ```
-* Special number: `Inf`: infinity
-```r
-g<-5/0
-class(g)
-```
-* `NaN` (Not a Number) or `NA` (Not Applicable) are undefined values and sometimes refered as missing values:
-```r
-h <- 0/0
-i <- NA
-h
-i
-```
+
 
 ## Random Number & seed
 Create random numeric numbers using runif
