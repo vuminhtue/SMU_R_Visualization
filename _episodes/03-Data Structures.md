@@ -3,15 +3,15 @@ title: "Data Structures"
 teaching: 20
 exercises: 0
 questions:
-- "Class of objects in R?"
-- "Data Type in R?"
-- "How many type of number in R?"
+- "Class of objects in Python?"
+- "Data Type in Python"
+- "How many type of number in Python?"
 - "Missing values"
 - "Subsetting"
 objectives:
 - "Identify 5 class of objects"
 - "Working with List"
-- "Type of number in R"
+- "Type of number in Python"
 - "Replace number with subset"
 keypoints:
 - "Class of objects"
@@ -19,23 +19,23 @@ keypoints:
 ---
 
 ## Classes of objects
-In R, there are 5 main classes of objects:
-* characters a, b
-* numeric: 2.3
-* interger: 5 or 5L
-* complex: 2+3i #consists of real and imaginary number
-* logical: TRUE/FALSE
+In Python, there are 5 main classes of objects:
+* str a, b
+* float/double: 2.3
+* int: 5 
+* complex: 2+3j #consists of real and imaginary number
+* bool: TRUE/FALSE
 
-```r
-str <- "string"
-class(str)
-a <- 5
-class(a)
-b <- 4L
-class(b)
-c <- 6i ^ (-3:3)
-class(c)
-d <- 1:10 < 5
+```python
+str <- "string1"
+type(str)
+a = 5
+type(a)
+b = 2.4
+type(b)
+c = 6j ** 3
+type(c)
+d = 10 < 5
 class(d)
 ```
 
