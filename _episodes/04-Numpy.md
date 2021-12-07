@@ -20,33 +20,43 @@ keypoints:
 ## Numpy
 Numpy[https://numpy.org/] stands for Numerical Python
 
-Nearly every scientist working in Python draws on the power of NumPy.
+- Numpy is an open source Python library used for scientific computing and provides a host of features that allow a Python programmer to work with high-performance arrays and matrices.
 
-NumPy brings the computational power of languages like C and Fortran to Python, a language much easier to learn and use. With this power comes simplicity: a solution in NumPy is often clear and elegant.
+- Nearly every scientist working in Python draws on the power of NumPy.
 
-## Vector
-Typical object is a vector, that can be defined using function `c()` #c stands for combine
+- NumPy brings the computational power of languages like C and Fortran to Python, a language much easier to learn and use. With this power comes simplicity: a solution in NumPy is often clear and elegant.
+
+- To use numpy, just import it to your library
+
+```python
+import numpy as np
+```
+
+## Numpy array
 
 ```r
-str <- c("a","b","c")
-a   <- c(4,5.6,20)
-b   <- c("TRUE","FALSE")
+list2 = [1,2,3,4]
+list2_np = np.array(list2)
+type(list2_np)
+```
+
+Or assign np array directly using:
+
+```python
+list3_np = np.array([1,2,3,4])
 ```
 
 A vector having different objects: `coercion`
-```r
-str1 <- c("a","b","c",5, 4.5)
-str1
-class(str1)
-b1<- c(5, FALSE)
-b1
-class(b1)
+
+```python
+list4_np = np.array(list1)
+list4_np
 ```
 
 ## Explicit Coercion
-Convert objects from one class to another, using `as.` function:
-```r
-a <- 0:5
+Convert objects from one class to another, using functions:
+```python
+a=[0,1,2,3,4,5]
 class(a)
 as.numeric(a)
 as.logical(a)
