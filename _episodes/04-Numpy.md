@@ -143,3 +143,24 @@ m
 
 There are several ways to iterate over multidimensional array
 
+- Iterate by row
+
+```python
+for row in n:
+    print(row)
+```
+
+- Iterate by index
+
+```python
+for ind in range(len(n)):
+    print(n[ind])
+```
+
+- Iterate by row and index
+
+```python
+for row,i in enumerate(n):
+    print('row', row)
+    print('index value', i)
+```
