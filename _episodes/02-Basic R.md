@@ -71,12 +71,12 @@ print(a)
 ## Working directory
 One important step in R is to define the working directory. It is particularly useful when you are working with files in the working directory and working in Linux environment in Palmetto:
 
-```r
-# print working directory
-getwd()
+```python
+# get current working directory
+import os
+os.getcwd()
 # set working directory
-setwd('C:/R/') # for Windows
-setwd('/user/home/R') # for Macs
+os.chdir('/users/tuev/')
 ```
 ## Seeking Help
 In order to look for help files for function:
