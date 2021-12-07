@@ -1,11 +1,12 @@
 ---
-title: "Matrices & Data Frame"
+title: "Introduction to Numpy"
 teaching: 20
 exercises: 0
 questions:
-- "Vector in R"
-- "How to define matrix in R?"
-- "How to manipulate a data frame in R?"
+- "What is Numpy"
+- "Vector in Python"
+- "How to define matrix in Python?"
+- "How to manipulate a data frame in Python?"
 - "How to read text/csv file"
 objectives:
 - "Working with Matrix"
@@ -15,6 +16,13 @@ objectives:
 keypoints:
 - "Working with csv input data"
 ---
+
+## Numpy
+Numpy[https://numpy.org/] stands for Numerical Python
+
+Nearly every scientist working in Python draws on the power of NumPy.
+
+NumPy brings the computational power of languages like C and Fortran to Python, a language much easier to learn and use. With this power comes simplicity: a solution in NumPy is often clear and elegant.
 
 ## Vector
 Typical object is a vector, that can be defined using function `c()` #c stands for combine
