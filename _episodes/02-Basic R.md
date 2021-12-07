@@ -34,14 +34,6 @@ From highest to lowest precedence:
 a = (1+2)*3-4^5
 ```
 
-* Other math functions: `sin, cos, log1(), log10()`
-For other math functions, we should use numpy library
-
-```python
-import numpy as np
-np.sin(1)+np.log10(90)
-```
-
 ## Compare in Python
 
 * `==`: equality
