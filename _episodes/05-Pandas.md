@@ -70,5 +70,53 @@ s3 = s1+s2
 To access index of a Series:
 
 ```python
+#Using index name
 s3['Mustang']
+
+#Using bracket
+s3[3]
+
+#Using index location
+s3.iloc[3]
+
+#Select subset of Series using filtering
+s3[s3>20]
 ```
+
+Insert an index value
+
+```python
+s3['Nothing']=np.nan
+s3
+```
+
+Catch a null value
+
+```python
+s3.isnull()
+
+#Assign null value with some numbers
+s3[s3.isnull()]=1
+# or
+s3.fillna(1)
+```
+
+Drop null value (Remove entire row with NaN value)
+
+```python
+s3.dropna()
+```
+
+Apply function over all index of Series:
+
+```python
+s3.apply(np.log10)
+```
+
+For longer function, we can use lambda functions.
+For example, if there are less than 20 available, we will add the value by 10:
+
+```python
+s3.apply(lambda x: x if x>20 else x+10)
+```
+
