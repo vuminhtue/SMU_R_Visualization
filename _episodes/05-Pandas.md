@@ -248,3 +248,9 @@ df3_out = pd.merge(df1,df2,how='outer',left_index=True,right_index=True)
 df3_left = pd.merge(df1,df2,how='left',left_index=True,right_index=True)
 df3_right = pd.merge(df1,df2,how='right',left_index=True,right_index=True)
 ```
+
+Save DataFrame to new csv file
+
+```python
+df3_in.to_csv('df3.csv')
+```
