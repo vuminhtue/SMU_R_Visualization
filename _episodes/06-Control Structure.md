@@ -24,33 +24,24 @@ if (condition):
    do task
 ```
 
-**if...else**
-```python
-if (condition1):
-   do task 1
-else:
-   do the rest
-```
+_Example_:
 
-**if...elif...else**
-```python
-if (condition1):
-   do task 1
-elif (condition2):
-   do task 2
-else:
-   do the rest
-```
-
-**Examples**
-if:
 ```python
 a = 5
 if (a>3):
    print("a is bigger than 3")
 ```
 
-if else:
+**if...else**
+_Syntax_
+```python
+if (condition1):
+   do task 1
+else:
+   do the rest
+```
+
+_Example_
 
 ```python
 a = 2
@@ -60,7 +51,18 @@ else:
    print("a is NOT bigger than 3")
 ```
 
-if elif else
+**if...elif...else**
+_Syntax_
+```python
+if (condition1):
+   do task 1
+elif (condition2):
+   do task 2
+else:
+   do the rest
+```
+
+_Example_
 
 ```python
 a =2
@@ -70,26 +72,26 @@ elif (a==3):
    print("a equals to 3")
 else:
    print("a is less than 3")
-}
+
 ```
 
 
 ## For Loop
-
+_Syntax_
 ```python
 for (iterator in sequence):
     do task
 }
 ```
 
-Example:
+_Example_
 ```python
 for i in range(1,5):
     print(i)
 ```
 
 ## While Loop
-Syntax
+_Syntax_
 ```python
 while (this condition is true):
       do a thing
@@ -97,7 +99,7 @@ while (this condition is true):
 
 ```
 
-Example:
+_Example:_
 ```python
 a=1
 while (a<5):
