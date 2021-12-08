@@ -167,30 +167,63 @@ df.tail(6)
 # The index of dataframe
 df.index
 
+# Set the index of dataframe
+df.set_index(['State/Territory','Total Cases'])
+df.reset_index
+df = df.set_index('State/Territory')
+
+# Sort the index
+df.sort_index(ascending=True)
+
 # Column Name of DataFrame
 df.columns
 
 # Transpose DataFrame
 df.T
 
-#Name of corresponding state
-df['State/Territory']
+# Value of certain Series:
+df['Total Cases']
+df[['Total Cases','Confirmed Cases']]
 
-# Print all value of the first row using location of the row
-df.loc[0]
-
-# Print certain column of the first row
-df.loc[0,'State/Territory']
+# Print entire row value:
+df.loc['Texas','South Carolina']
 ```
 
 Index location
 Similar to other programming language like Matlab or R using tabular data, pandas DataFrame also has ability to access the _index location_ using **iloc**:
 
 ```python
-df.iloc[0,2]
+df.iloc[0,0]
 df.iloc[0:2,0:5]
 df.iloc[:3,3:]
 ```
 
+Querying a DataFrame
+
+```python
+df['Total Cases']>50000
+high_case = df[df['Total Cases']>50000]
+high_case.head()
+type(high_case)
+```
+
+Some Statistics with DataFrame
+
+```python
+# What is the max number of case
+high_case['Total Cases'].max()
+
+# What is the corresponding index (state) name? Using **idxmax** or **argmax**
+high_case['Total Cases'].idxmax()
+
+# Reveal all information on the state with max number of case
+high_case.loc[high_case['Total Cases'].idxmax()]
+
+# Drop by columns, axis=1
+high_case.drop(['Total Cases','Case Rate per 100000'],axis=1)
+
+# Drop by rows, axis=0
+high_case.drop(['Alabama','Indiana'],axis=0)
+```
 
 
