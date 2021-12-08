@@ -28,112 +28,100 @@ a = np.arange(1,5)
 a.mean()
 
 b = np.Series(a)
-b.mean()
+b.max()
+```
+
+## Using User-Define a function without arg(ument):
+_Syntax:_
+
+```python
+def function_name():
+    do some stuff     
+```
+
+_Example:_
+
+```python
+def callme():
+    print('Hello')
 ```
 
 ## Using User-Define a function with 1 arg(ument)
-Syntax:
+_Syntax:_
 
-```r
-f <- function(arg){
-  do function with argument
-}
+```python
+def function_name(arg):
+    do function with argument
+    return output
 ```
 
-Example:
+_Example:_
 
-```r
-squareroot <- function(a){
-  a^0.5
-}
+```python
+def squareroot1(a):
+    a=a+1
+    return a**0.5
+
 squareroot(49)
 ```
+
 ## Using User-Define a function with 2 or more arg(uments)
-Syntax:
+_Syntax:_
 
-```r
-f <- function(arg1,arg2){
-  do function with arg1 & arg2
-}
+```python
+f = function(arg1,arg2):
+    do function with arg1 & arg2
 ```
 
-Example:
+_Example:_
 
-```r
-Addtwo <- function(a,b){
-  a+b
+```python
+def addtwo(a,b):
+    return a+b
 }
-Addtwo(1,2)
-```
-## Return specific value from function
-Syntax:
-```r
-f <- function(args){
-  f1 <- do function with args
-  return(f1)
-}
-```
-For example:
-```r
-# Function to convert oF to oC
-F2C <- function(temp){
-   c <- ((temp - 32) * (5 / 9))
-   return(c)
-}
-F2C(100)
+addtwo(1,2)
 ```
 
 ## Return list of (more) values from function
-Syntax:
-```r
-f <- function(args){
-  do function with args
-  out1 <- do1
-  out2 <- do2  
-  output <- list(out1=out1,out2=out2)
-}
+_Syntax:_
+
+```python
+f = function(args):
+    do function with args
+    out1 <- do1
+    out2 <- do2  
+    output <- list(out1=out1,out2=out2)
 ```
 
-Example:
-```r
-sqsum <- function(a){
-  sq <- a^0.5
-  sumsq <- a+sq  
-  output <- list(sq=sq, sumsq=sumsq)
-}
+_Example:_
+
+```python
+def sqsum(a):
+    sq = a**0.5
+    sum = a+sq
+    return sq,sum
+    
 sqsum(49)
 ```
 
 ## Nested function
 In complex data science use cases, we may have to work on nested functions, which contain functions within a function.
-For example: Given dataset `mtcars`. Find the mean of fuel consumption `mpg` for cars that having 4 cylinders `cyl`
+For example in the covid dataset, we would like to find the max number of Total Cases with South Region and the associated State:
 
-```r
-data(mtcars)
-names(mtcars)
-
-# Step 1: find the cars that having 4 cylinders:
-ind1 <- mtcars$cyl==4
-# Step 2: find the fuel consumption of all the cars having 4 cylinders:
-ind2 <- mtcars$mpg[ind1]
-# Step 3: compute the mean
-mean(ind2)
-```
-All the 3 steps can be nested into one command line for experience user:
-```r
-mean(mtcars$mpg[mtcars$cyl==4])
+```python
+# Step 1: find the state in South region
+ind1 = df['State Region']=='South'
+# Step 2: find the Total Cases with respected to South region
+ind2 = df['Total Cases'][ind1]
+# Step 3: compute the max
+ind2.max()
+# Step 4: Find the corresponding state with max number of Total Case in the South:
+ind2.idxmax()
 ```
 
-## Defensive programming with `stopifnot()` function
-Defensive programming encourages us to frequently check conditions and throw an error if something is wrong. 
-For example:
-```r
-F2C <- function(temp){
-   stopifnot(is.numeric(temp)==TRUE)
-   c <- ((temp - 32) * (5 / 9))
-   return(c)
-}
-F2C(100a)
-F2C(100)
-```
+All the steps can be nested into one command line for experience user:
 
+```python
+df['Total Cases'][df['State Region']=='South'].max()
+df['Total Cases'][df['State Region']=='South'].idxmax()
+```
