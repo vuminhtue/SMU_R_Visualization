@@ -224,6 +224,9 @@ high_case.drop(['Total Cases','Case Rate per 100000'],axis=1)
 
 # Drop by rows, axis=0
 high_case.drop(['Alabama','Indiana'],axis=0)
+
+# Find the State from the South with more than 40000 Total Cases:
+df[(df['State Region']=='South') & (df['Total Cases']>40000)]
 ```
 
 
