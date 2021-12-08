@@ -16,6 +16,7 @@ keypoints:
 ---
 
 ## if-else
+
 _Syntax:_
 
 **if**
@@ -33,7 +34,9 @@ if (a>3):
 ```
 
 **if...else**
+
 _Syntax_
+
 ```python
 if (condition1):
    do task 1
@@ -52,7 +55,9 @@ else:
 ```
 
 **if...elif...else**
+
 _Syntax_
+
 ```python
 if (condition1):
    do task 1
@@ -77,7 +82,9 @@ else:
 
 
 ## For Loop
+
 _Syntax_
+
 ```python
 for (iterator in sequence):
     do task
@@ -91,7 +98,9 @@ for i in range(1,5):
 ```
 
 ## While Loop
+
 _Syntax_
+
 ```python
 while (this condition is true):
       do a thing
