@@ -229,4 +229,22 @@ high_case.drop(['Alabama','Indiana'],axis=0)
 df[(df['State Region']=='South') & (df['Total Cases']>40000)]
 ```
 
+Create new colum named Ratio Death/Total Cases (%) and the value is division of 2 columns 'Total Deaths' by 'Total Cases'
 
+```python
+df['Ratio Death/Total Cases (%)']=df['Total Deaths']/df['Total Cases']*100
+```
+
+Splitting and Merging DataFrame
+
+```python
+#Splitting DataFrame
+df1 = df.iloc[0:6,0:3]
+df2 = df.iloc[2:8:,3:5]
+
+# Merge Data Frame using pd.merge
+df3_in = pd.merge(df1,df2,how='inner',left_index=True,right_index=True)
+df3_out = pd.merge(df1,df2,how='outer',left_index=True,right_index=True)
+df3_left = pd.merge(df1,df2,how='left',left_index=True,right_index=True)
+df3_right = pd.merge(df1,df2,how='right',left_index=True,right_index=True)
+```
