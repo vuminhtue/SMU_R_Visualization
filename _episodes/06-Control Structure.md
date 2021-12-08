@@ -32,7 +32,7 @@ else:
    do the rest
 ```
 
-**if...elseif...else**
+**if...elif...else**
 ```python
 if (condition1):
    do task 1
