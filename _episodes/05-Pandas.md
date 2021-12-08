@@ -131,5 +131,66 @@ year = range(2015,2021)
 Series1 = pd.Series([1,2,3,4,5,6],index=year)
 Series10 = pd.Series([10,20,30,40,50,60],index=year)
 Series100 = pd.Series([100,200,300,400,500,600],index=year)
-df = pd.DataFrame([Series1,Series10,Series100],index=['N1','N10','N100'])
+df1 = pd.DataFrame([Series1,Series10,Series100],index=['N1','N10','N100'])
 ```
+
+Another way to create a DataFrame using concat function
+
+```python
+df2 = pd.concat([Series1,Series10,Series100],axis=1)
+df2.columns = (['N1','N2','N3'])
+df2
+```
+
+Check the Data Type of the two DataFrame:
+
+```python
+type(df1)
+type(df2)
+```
+
+Now let's read in some csv file.
+The data is related to number of covid case in USA counted on Jan 1st, 2021. I have uploaded it to my account and opened access for everyone:
+
+```python
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Basic/master/data/1-1-21%20US%20covid19.csv?token=AKOSZNMYYTK3YJJG2WS4CITBWD4M2')
+df.head()
+```
+
+Some basic information from the DataFrame
+
+```python
+#Head & Tail of DataFrame with number of row to be printed:
+df.head(6)
+df.tail(6)
+
+# The index of dataframe
+df.index
+
+# Column Name of DataFrame
+df.columns
+
+# Transpose DataFrame
+df.T
+
+#Name of corresponding state
+df['State/Territory']
+
+# Print all value of the first row using location of the row
+df.loc[0]
+
+# Print certain column of the first row
+df.loc[0,'State/Territory']
+```
+
+Index location
+Similar to other programming language like Matlab or R using tabular data, pandas DataFrame also has ability to access the _index location_ using **iloc**:
+
+```python
+df.iloc[0,2]
+df.iloc[0:2,0:5]
+df.iloc[:3,3:]
+```
+
+
+
