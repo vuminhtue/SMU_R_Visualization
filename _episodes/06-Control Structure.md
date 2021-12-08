@@ -16,7 +16,7 @@ keypoints:
 ---
 
 ## if-else
-Syntax:
+_Syntax:_
 
 **if**
 ```python
