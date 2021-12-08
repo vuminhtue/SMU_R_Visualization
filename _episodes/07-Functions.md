@@ -3,7 +3,7 @@ title: "Function"
 teaching: 10
 exercises: 0
 questions:
-- "How to write function in R?"
+- "How to write function in Python?"
 - "How can I use the function from packages"
 objectives:
 - "Define function"
@@ -11,28 +11,25 @@ objectives:
 - "Return value(s) from function"
 - "Check argument conditions with `stopifnot()` function"
 -keypoints:
-- "Use `function` to define a new function in R"
+- "Use `function` to define a new function in Python"
 - "Use parameter to pass value to function"
-- "Load function into program using `source()`"
+- "Load function into program using `import`"
 ---
 
 A function is a set of scripts organized together to carry out a specific task. Writing efficient functions is an important skill that can significantly improve the productivity of data scientists and data science solutions. In this guide, you will learn the basics of writing a function and the types of functions, which will enable you perform analytical tasks more efficiently.
 
 ## Using custom functions
 
-There are several in-built functions in R that can be used to perform analytical tasks, for example: `mean, min, max, quantile,summary`.
-Detail on `mean()` function below:
+There are several in-built functions in Python that can be used to perform analytical tasks, for example: `mean, min, max, quantile,summary`. Function in python (numpy, pandas) is normally called via "**.**":
 
-```r
-mean(arg)
+
+```python
+a = np.arange(1,5)
+a.mean()
+
+b = np.Series(a)
+b.mean()
 ```
-
-Using function mean with missing value
-```r
-v <- c(2,NA,4,NaN,6)
-mean(v,na.rm=TRUE)
-```
-
 
 ## Using User-Define a function with 1 arg(ument)
 Syntax:
