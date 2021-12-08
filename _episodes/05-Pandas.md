@@ -64,7 +64,7 @@ s2
 One can add the 2 Series if they have similar index:
 
 ```python
-s3 = s1+s2
+s3 = s1*s2
 ```
 
 To access index of a Series:
@@ -120,3 +120,16 @@ For example, if there are less than 20 available, we will add the value by 10:
 s3.apply(lambda x: x if x>20 else x+10)
 ```
 
+## Pandas DataFrames
+A DataFrame is considered a table of data (similar to a single Excel spreadsheet). It consists of many different pandas Series (as columns) that having the same index.
+One should utilize the DataFrame when working with csv, table format.
+
+A sample of DataFrame
+
+```python
+year = range(2015,2021)
+Series1 = pd.Series([1,2,3,4,5,6],index=year)
+Series10 = pd.Series([10,20,30,40,50,60],index=year)
+Series100 = pd.Series([100,200,300,400,500,600],index=year)
+df = pd.DataFrame([Series1,Series10,Series100],index=['N1','N10','N100'])
+```
