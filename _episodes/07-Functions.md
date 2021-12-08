@@ -86,11 +86,11 @@ addtwo(1,2)
 _Syntax:_
 
 ```python
-f = function(args):
+def function(args):
     do function with args
-    out1 <- do1
-    out2 <- do2  
-    output <- list(out1=out1,out2=out2)
+    out1 = do1
+    out2 = do2  
+    return out1, out2
 ```
 
 _Example:_
