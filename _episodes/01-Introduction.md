@@ -14,3 +14,8 @@ keypoints:
 - Matplotlib was created by John D. Hunter.
 - Matplotlib is open source and we can use it freely.
 - Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility.
+- To install matplotlib, activate the conda environment:
+
+```python
+pip install matplotlib
+```
