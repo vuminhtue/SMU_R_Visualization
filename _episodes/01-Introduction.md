@@ -1,19 +1,16 @@
 ---
-title: "Introduction to Python"
+title: "Introduction to Visualization with Python"
 teaching: 5 min
 exercises: 0
-questions: "What is Python?"
+questions: "How to visualize data in Python"
 objectives:
-- "Basic Introductory of Python"
-- "Why using Python"
+- "Basic Introductory of Matplotlib"
+
 keypoints:
-- "Advantage of using Python"
+- "Matplotlib"
 ---
-- Python is the top of Data Science language
-- Python and its other libraries are mostly used in Machine Learning and Deep Learning field
-- Python was developed by
-- Python provides a wide variety of statistical (linear and nonlinear modelling, classical statistical tests, time-series analysis, classification, clustering, …) and graphical techniques, and is highly extensible. 
-- Python is available as Free Software 
-- Python is versaltile and running on many different platform: Jupyter Hub, PyCharm, VSCode
 
-
+- Matplotlib is a low level graph plotting library in python that serves as a visualization utility.
+- Matplotlib was created by John D. Hunter.
+- Matplotlib is open source and we can use it freely.
+- Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility.
