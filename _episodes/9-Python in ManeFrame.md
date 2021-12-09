@@ -113,5 +113,5 @@ Then, while in a login node, submit a batch script
 $ sbatch myfirst_batch.sh
 ```
 
-You can see the output starting with ($Job_Name)_($JobID)
+You can see the output as specified in the output file python_%j.out
 
