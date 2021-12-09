@@ -44,3 +44,10 @@ ax = plt.gca()
 #Set axis property to range (0, 5)
 ax.axis([0,5,0,5]))
 ```
+
+## Let's load some Covid-19 data from Kaggle and we will start PLOTTING !!!
+
+```python
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Basic/master/data/1-1-21%20US%20covid19.csv')
+df.head()
+```
