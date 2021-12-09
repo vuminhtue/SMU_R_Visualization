@@ -1,5 +1,5 @@
 ---
-title: "Basic of Python"
+title: "Basic of Matplotlib"
 teaching: 5
 exercises: 0
 questions:
@@ -7,72 +7,40 @@ questions:
 - "how to initialize a variable"
 - "how to get help"
 objectives:
-- "Python built-in function"
+- "Basic Matplotlib"
 keypoints:
-- "Use Jupyter Notebook as general platform to write and run Python code."
-- "Python has the usual arithmetic operators and mathematical functions."
+- "Use Jupyter Notebook as general platform to write and visualize Python code using Matplotlib."
 ---
 
-## Familiar yourself with Jupyter Notebook
-- How to request for Jupyter Hub from SMU Open OnDemand platform
-- How to use different kernel
-
-## Using Python as calculator
-When using Python as a calculator, the order of operations is the same as you
-would have learned back in school.
-
-From highest to lowest precedence:
-
- * Parentheses: `(`, `)`
- * Exponents: `**`
- * Multiply: `*`
- * Divide: `/`
- * Add: `+`
- * Subtract: `-`
+## How to display plot in Jupyter Notebook
+You can visualize plot in JNotebook using %matplotlib notebook and %matplotlib inline magic commands.
 
 ```python
-a = (1+2)*3-4^5
+%matplotlib notebook
+(%matplotlib inline)
+
+import matplotlib.pyplot as plt
+plt.plot(1,2,'*')
 ```
 
-## Compare in Python
-
-* `==`: equality
-* `!=`: inequality 
-* `<`& `<=`: less than & less than or equal to
-* `>`& `>=`: more than & more than or equal to
+# More control over plot
 
 ```python
-1==1
-3!=4
-5>4
-```
+# Design the plot
+plt.figure()
 
-## Assign Variables
-- To assign variable in Python, we can use `=` sign
+# Start plotting
+plt.plot(1,2,'o')
+plt.plot(2,3,'*')
+plt.plot(3,4,"s")
 
-```python
-a = 1
-```
-- To print the variable to console
+# Label and Title:
+plt.xlabel('X Label')
+plt.ylabel('Y Label')
+plt.title('Title')
 
-```python
-a
-print(a)
-```
-
-## Working directory
-One important step in R is to define the working directory. It is particularly useful when you are working with files in the working directory and working in Linux environment in Palmetto:
-
-```python
-# get current working directory
-import os
-os.getcwd()
-# set working directory
-os.chdir('/users/tuev/')
-```
-## Seeking Help
-In order to look for help files for function:
-
-```python
-help(numpy.add)
+# Get current axes
+ax = plt.gca()
+#Set axis property to range (0, 5)
+ax.axis([0,5,0,5]))
 ```
