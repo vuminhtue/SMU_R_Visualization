@@ -48,6 +48,10 @@ ax.axis([0,5,0,5]))
 ## Let's load some Covid-19 data from Kaggle and we will start PLOTTING !!!
 
 ```python
+import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Basic/master/data/1-1-21%20US%20covid19.csv')
+df = df.set_index('State/Territory')
 df.head()
 ```
+
+Now let's move on to other type of plot
