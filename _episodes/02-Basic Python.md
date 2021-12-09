@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 plt.plot(1,2,'*')
 ```
 
-# More control over plot
+## More control over plot
 
 ```python
 # Design the plot
