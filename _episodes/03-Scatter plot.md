@@ -45,3 +45,14 @@ plt.title("USA Covid19: Total Cases vs Total Death in all states")
 plt.xlabel('Total Number of Cases')
 plt.ylabel('Total Number of Deaths')
 ```
+
+And it is shorter using seaborn
+
+```python
+%matplotlib notebook
+X = df['Total Cases']
+Y = df['Total Deaths']
+Z = df['State Region']
+sns.scatterplot(X,Y,hue=Z,data=df)
+```
+
