@@ -36,3 +36,21 @@ plt.ylabel('Highway milage')
 
 ![image](https://user-images.githubusercontent.com/43855029/145869618-d9995d8b-97da-43b6-b3e0-e35d8f8df472.png)
 
+### Using Seaborn
+
+For this type of plot, Seaborn provides better and faster method of plotting:
+
+```python
+%matplotlib notebook
+import seaborn as sns
+ax = sns.boxplot(x="hwy",y="manufacturer",data=df)
+ax = sns.stripplot(x="hwy",y="manufacturer",data=df,color="black")
+ax.set(ylabel='Manufacturer',
+       xlabel='Highway milage',
+       title='Boxplot for Hwy per manufacturer')
+ax.grid()       
+```
+
+![image](https://user-images.githubusercontent.com/43855029/145871545-2ac9c158-b6e1-4305-9152-919e5f12dfe5.png)
+
+
