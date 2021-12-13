@@ -18,6 +18,9 @@ plt.scatter(X, Y)
 ```
 
 ## Let's load some dataset and we will start PLOTTING !!!
+
+### Using Matplotlib
+
 Here are the fuel consumption for different type of cars in miles per gallon (mpg)
 
 ```python
@@ -71,7 +74,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/43855029/145860699-42d13c55-f289-46d3-b6a4-665b2708cbdd.png)
 
-And it is shorter using seaborn
+### Using seaborn
 
 ```python
 %matplotlib notebook
@@ -82,3 +85,16 @@ ax.set(xlabel='Highway (mpg)',
 ```
 
 ![image](https://user-images.githubusercontent.com/43855029/145861518-ded72e77-15d1-47b1-ab06-f37513e46198.png)
+
+Linear modeling plot using seaborn
+
+```python
+%matplotlib notebook
+ax = sns.lmplot(x="hwy",y="cty",hue="cyl",data=df)
+ax.set(xlabel='Highway (mpg)',
+       ylabel='City (mpg)',
+       title='Highway vs City Fuel Consumption')
+```
+
+![image](https://user-images.githubusercontent.com/43855029/145862849-0e5640a1-4853-4b02-b744-87f00b6ddee2.png)
+
