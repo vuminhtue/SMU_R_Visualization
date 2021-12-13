@@ -29,6 +29,9 @@ import matplotlib.pyplot as plt
 plt.plot(1,2,'*')
 ```
 
+![image](https://user-images.githubusercontent.com/43855029/145853114-9798e00b-3bc9-43dd-b131-84b150b9149f.png)
+
+
 ## More control over plot using Matplotlib
 
 ```python
@@ -89,13 +92,3 @@ plt.plot(3,4,"s")
 pip install seaborn
 ```
 
-## Let's load some Covid-19 data from Kaggle and we will start PLOTTING !!!
-
-```python
-import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Basic/master/data/1-1-21%20US%20covid19.csv')
-df = df.set_index('State/Territory')
-df.head()
-```
-
-Now let's move on to other type of plot
