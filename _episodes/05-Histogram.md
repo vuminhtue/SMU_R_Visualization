@@ -35,3 +35,19 @@ ax.set(xlabel='Engine Displacement',
 
 ![image](https://user-images.githubusercontent.com/43855029/145874657-ae3ca47c-3def-4c98-9479-1cb7c352683e.png)
 
+
+### Plotting 2 different historgram plot using seaborn.jointplot
+
+Here we will plot the distribution of fuel consumption for Highway and City then plot the scatter plot between them:
+
+```python
+sns.jointplot("hwy", "cty",data=df, kind="hex")
+```
+![image](https://user-images.githubusercontent.com/43855029/145886106-08cb1a25-cd3a-4b37-8116-049d70180b2b.png)
+
+
+```python
+ax = sns.jointplot("hwy", "cty",hue="cyl",data=df,palette="Spectral")
+```    
+
+![image](https://user-images.githubusercontent.com/43855029/145885873-615791d6-24b4-4794-9d37-5d08b311340b.png)
