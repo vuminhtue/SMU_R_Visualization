@@ -89,6 +89,7 @@ plt.plot(3,4,"s")
 ## Install and import seaborn
 
 ```python
-pip install seaborn
+!pip install seaborn
+import seaborn as sns
 ```
 
