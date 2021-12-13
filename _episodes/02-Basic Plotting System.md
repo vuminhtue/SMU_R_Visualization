@@ -4,10 +4,10 @@ teaching: 5
 exercises: 0
 questions:
 - "How many plotting system in Python"
-- "How to use Matplotlib & Other"
+- "How to use Matplotlib & Seaborn"
 objectives:
 - "Basic Matplotlib"
-- "Basic seaborn"
+- "Basic Seaborn"
 keypoints:
 - "Use Jupyter Notebook as general platform to write and visualize Python code using Matplotlib and Seaborn"
 ---
@@ -15,7 +15,7 @@ keypoints:
 ## Plotting system in Python
 There are many different packages providing plotting system for Python.
 - The oldest one is Matplotlib, introduced in 2003 and gives you more control over your plots
-- Seaborn is an abstraction layer on top of Matplotlib; You can write a shorter code but having a nicer plot than Matplotlib
+- Seaborn is an abstraction layer on top of Matplotlib; You can write a shorter code but having a nicer plot than Matplotlib. Seaborn can be compared to ggplot2 in R.
 - Other: Plotly, Bokeh, Altair, Pygal and their discussion can be found [here](https://opensource.com/article/20/4/plot-data-python)
 
 ## How to display plot in Jupyter Notebook
@@ -86,7 +86,7 @@ plt.plot(3,4,"s")
 ![image](https://user-images.githubusercontent.com/43855029/145853035-f95fc8f1-072d-4808-83d2-1e3fed8fd306.png)
 
 
-## Install and load seaborn
+## Install and import seaborn
 
 ```python
 pip install seaborn
