@@ -17,63 +17,68 @@ _Syntax_
 plt.scatter(X, Y)
 ```
 
-## Let's load some Covid-19 data from Kaggle and we will start PLOTTING !!!
+## Let's load some dataset and we will start PLOTTING !!!
+Here are the fuel consumption for different type of cars in miles per gallon (mpg)
 
 ```python
 import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Basic/master/data/1-1-21%20US%20covid19.csv')
-df = df.set_index('State/Territory')
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/mpg.csv?token=AKOSZNPVAEY7GPR2PGOWWVDBW55SG')
 df.head()
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145853330-7f3fc82f-8d9b-4a4a-942c-9f980d9299cf.png)
+![image](https://user-images.githubusercontent.com/43855029/145855346-8e365918-4659-4d14-96d2-6942017aa0cd.png)
 
 Now let's move on to other type of plot
 
-Plot a scatter plot with X axis for Total Cases and Y axis for Total Deaths
+Plot a scatter plot with X axis for Highway (hwy) and Y axis for City (cty) mpg
 
 ```python
 %matplotlib notebook
-X = df['Total Cases']
-Y = df['Total Deaths']
-
-plt.scatter(X,Y,c = "green", s = 30, marker='s')
-plt.title("USA Covid19: Total Cases vs Total Death in all states")
-plt.xlabel('Total Number of Cases')
-plt.ylabel('Total Number of Deaths')
+plt.scatter(df["hwy"],df["cty"])
+plt.title("Highway vs City Fuel Consumption")
+plt.xlabel('Highway (mpg)')
+plt.ylabel('City (mpg)')
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145853385-60fbd0e4-1ab6-4075-872c-ba003a757c60.png)
+![image](https://user-images.githubusercontent.com/43855029/145856301-66baceff-6198-44cc-bff7-99f9364b00a2.png)
 
-If we want to have a more detailed scatter plot with different regions, we introduce the color layer and corresponding legend:
+We can also control the color "c", size "s" and marker using the following syntax:
+
+```python
+plt.scatter(df["hwy"],df["cty"],c="green",s=20,marker="s")
+```
+
+If we want to have a more detailed scatter plot, we introduce the color layer and corresponding legend:
 
 ```python
 %matplotlib notebook
-X = df['Total Cases']
-Y = df['Total Deaths']
-C = df['State Region'].factorize()
+# Sort data by column:
+df1 = df.sort_values(by='cyl')
 
-s=plt.scatter(X,Y,c = C[0], s = 30, marker='s',cmap="Spectral")
-plt.legend(s.legend_elements()[0],C[1])
+# Compute factor of cylinder data:
+C = df1["cyl"].factorize()
 
-plt.title("USA Covid19: Total Cases vs Total Death in all states")
-plt.xlabel('Total Number of Cases')
-plt.ylabel('Total Number of Deaths')
+# Start ploting with scatter plot:
+s = plt.scatter(df1["hwy"],df1["cty"],c=C[0],s=(C[0]+5)**2,cmap="Spectral")
+
+# Ploting annotation & legend:
+plt.legend(s.legend_elements()[0],C[1],title="No. cylinder")
+plt.title("Highway vs City Fuel Consumption")
+plt.xlabel('Highway (mpg)')
+plt.ylabel('City (mpg)')
+plt.show()
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145853423-37a65043-c076-43bf-9855-66107e757eda.png)
-
+![image](https://user-images.githubusercontent.com/43855029/145860699-42d13c55-f289-46d3-b6a4-665b2708cbdd.png)
 
 And it is shorter using seaborn
 
 ```python
 %matplotlib notebook
-import seaborn as sns
-X = df['Total Cases']
-Y = df['Total Deaths']
-Z = df['State Region']
-sns.scatterplot(X,Y,hue=Z,data=df)
+ax = sns.scatterplot(x="hwy",y="cty",hue="cyl",size="cyl",data=df,palette="Spectral")
+ax.set(xlabel='Highway (mpg)',
+       ylabel='City (mpg)',
+       title='Highway vs City Fuel Consumption')
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145853490-aac1c3ce-9c2a-45fa-ad2f-df8f7998a09e.png)
-
+![image](https://user-images.githubusercontent.com/43855029/145861518-ded72e77-15d1-47b1-ab06-f37513e46198.png)
