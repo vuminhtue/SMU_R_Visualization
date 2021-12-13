@@ -51,6 +51,38 @@ ax = plt.gca()
 ax.axis([0,5,0,5]))
 ```
 
+![image](https://user-images.githubusercontent.com/43855029/145853020-a7a44ca1-040f-4333-bd4d-00004e71b084.png)
+
+
+## Subplot in Matplotlib
+
+Very similar to Matlab, one just need to insert the plot number using subplot command:
+
+```python
+plt.subplot(2,2,1)
+plt.plot(1,2,'o')
+plt.plot(2,3,'*')
+plt.plot(3,4,"s")
+
+plt.subplot(2,2,2)
+plt.plot(1,2,'o')
+plt.plot(2,3,'*')
+plt.plot(3,4,"s")
+
+plt.subplot(2,2,3)
+plt.plot(1,2,'o')
+plt.plot(2,3,'*')
+plt.plot(3,4,"s")
+
+plt.subplot(2,2,4)
+plt.plot(1,2,'o')
+plt.plot(2,3,'*')
+plt.plot(3,4,"s")
+```
+
+![image](https://user-images.githubusercontent.com/43855029/145853035-f95fc8f1-072d-4808-83d2-1e3fed8fd306.png)
+
+
 ## Install and load seaborn
 
 ```python
