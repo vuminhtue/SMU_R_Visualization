@@ -27,12 +27,11 @@ plt.ylabel("Frequency count")
 
 ```python
 %matplotlib notebook
-ax = sns.histplot(x="displ", hue="class", data=df,palette = "bright")
+ax = sns.histplot(x="displ", bins=9, hue="class", data=df,palette = "bright")
 ax.set(xlabel='Engine Displacement',
        ylabel='Frequency Count',
        title='Histogram with fixed bins')
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145874422-2b602d16-057b-4a20-9f5b-76e30ae775b0.png)
-
+![image](https://user-images.githubusercontent.com/43855029/145874657-ae3ca47c-3def-4c98-9479-1cb7c352683e.png)
 
