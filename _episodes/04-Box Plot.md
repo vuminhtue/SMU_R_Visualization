@@ -53,4 +53,17 @@ ax.grid()
 
 ![image](https://user-images.githubusercontent.com/43855029/145871545-2ac9c158-b6e1-4305-9152-919e5f12dfe5.png)
 
+#### Similarly, we can use the same technique for violin plot:
+
+```python
+%matplotlib notebook
+import seaborn as sns
+ax = sns.violinplot(x="class",y="cty",data=df)
+ax.set(xlabel='Class of Vehicle',
+       ylabel='City mileage',
+       title='Violin plot for City mileage with Class of Vehicle')
+ax.grid()
+```
+
+![image](https://user-images.githubusercontent.com/43855029/145871965-d2e80d65-82a9-4c38-ac89-03bfc68acf54.png)
 
