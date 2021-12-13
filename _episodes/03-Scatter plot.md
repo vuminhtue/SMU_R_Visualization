@@ -90,11 +90,12 @@ Linear modeling plot using seaborn
 
 ```python
 %matplotlib notebook
-ax = sns.lmplot(x="hwy",y="cty",hue="cyl",data=df)
+ax = sns.lmplot(x="hwy",y="cty",hue="cyl", markers=["o", "x","s","*"],data=df)
 ax.set(xlabel='Highway (mpg)',
        ylabel='City (mpg)',
        title='Highway vs City Fuel Consumption')
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/145862849-0e5640a1-4853-4b02-b744-87f00b6ddee2.png)
+![image](https://user-images.githubusercontent.com/43855029/145863223-88883747-bc43-4212-b451-070d7d6ccf16.png)
 
+More information on using seaborn with scatter plot can be found [here](http://seaborn.pydata.org/tutorial/regression.html)
