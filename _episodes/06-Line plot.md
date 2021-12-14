@@ -91,15 +91,17 @@ It is very similar to the previous example for 2 y-axes plotting
 
 fig, ax1 = plt.subplots()
 
-ax1 = sns.lineplot(df["month"],df["T (degC)"],data=df)
+ax1 = sns.lineplot(df["month"],df["T (degC)"],color="red",data=df)
 ax1.set_title("Monthly Climatology Temperature vs Relative Humidity at Jena station")
 ax1.set_xlabel("Month")
-ax1.set_ylabel("Temperature (oC)")
+ax1.set_ylabel("Temperature (oC)",color="red")
 plt.xticks(rotation=45)
 
+
 ax2 = ax1.twinx()
-ax2 = sns.lineplot(df["month"],df["rh (%)"],color="red",linestyle="dashed")
-ax2.set_ylabel("Relative Humidity (%)",color="red")
+ax2 = sns.lineplot(df["month"],df["rh (%)"],color="blue",linestyle="dashed")
+ax2.set_ylabel("Relative Humidity (%)",color='blue')
 ```
 
-![image](https://user-images.githubusercontent.com/43855029/146038072-894175c3-0807-41c4-a8b6-f29495c3e5a3.png)
+![image](https://user-images.githubusercontent.com/43855029/146040000-8c562240-ff9b-461d-89f1-c15e8baab7b2.png)
+
