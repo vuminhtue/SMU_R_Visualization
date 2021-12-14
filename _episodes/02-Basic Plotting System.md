@@ -100,15 +100,18 @@ legend("topright",legend=c(8,6,4),pch=16,cex=3,
 ```r
 par(mfrow=c(2,2))
 hist(mtcars$mpg,col="blue")
-hist(mtcars$wt,col="blue")
+boxplot(mpg~cyl,data=mtcars,
+        col=terrain.colors(3),main="MPG by car cylinders",
+        xlab = "cylinders",ylab="mpg")
+legend("topright",c("4","6","8"),fill = terrain.colors(3))
+
 plot(mtcars$mpg,mtcars$wt,main="Car Fuel vs Weight",
      xlab="Milage per Gallon",ylab="Weight",
      col = mtcars$cyl,pch=16,cex=3)
 barplot(mtcars$mpg,col="green",
         main="MPG for 32 cars")     
 ```
-![image](https://user-images.githubusercontent.com/43855029/146048487-bfdebb8a-7b58-4129-a341-56abe4125ccc.png)
-
+![image](https://user-images.githubusercontent.com/43855029/146048776-c179b742-279c-47b4-9380-2bbd13b6e25c.png)
 
 ## Graphics Devices
 A graphics device is something where you can make a plot appear When you make a plot in R, it has to be "sent" to a specific graphics device.
