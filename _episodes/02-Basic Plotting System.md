@@ -54,10 +54,11 @@ Five-number summary
 ```r
 summary(mtcars)
 ```
-* Boxplots:
+#### Boxplots:
 ```r
 boxplot(mtcars$mpg,col="blue",main="Boxplot for mpg")
 ```
+
 ```r
 factor(mtcars$cyl)
 boxplot(mpg~cyl,data=mtcars,
@@ -65,30 +66,26 @@ boxplot(mpg~cyl,data=mtcars,
         xlab = "cylinders",ylab="mpg")
 legend("topright",c("4","6","8"),fill = terrain.colors(3))
 ```
+
 ![image](https://user-images.githubusercontent.com/43855029/114093764-82f57d00-9889-11eb-8e8a-bb7d11340f02.png)
 
-* Histograms
+#### Histograms
+
 ```r
 hist(mtcars$hp, col="magenta")
 ```
 ![image](https://user-images.githubusercontent.com/43855029/114093825-94d72000-9889-11eb-953f-2b232708b37d.png)
 
-* Barplot
+#### Barplot
+
 ```r
 barplot(mtcars$mpg,col="green",
         main="MPG for 32 cars")
 ```
 ![image](https://user-images.githubusercontent.com/43855029/114093880-a7515980-9889-11eb-800e-0152f2e8c207.png)
 
-* Multiple historgrams
-```r
-par(mfrow=c(1,2))
-hist(mtcars$mpg,col="blue")
-hist(mtcars$wt,col="blue")
-```
-![image](https://user-images.githubusercontent.com/43855029/114093954-b932fc80-9889-11eb-8532-f3db53f6278f.png)
+#### Scatter plot
 
-* Scatter plot
 ```r
 plot(mtcars$mpg,mtcars$wt,main="Car Fuel vs Weight",
      xlab="Milage per Gallon",ylab="Weight",
@@ -97,6 +94,20 @@ legend("topright",legend=c(8,6,4),pch=16,cex=3,
        col=c("grey","magenta","blue"))
 ```
 ![image](https://user-images.githubusercontent.com/43855029/114094073-dff13300-9889-11eb-9f97-6675f7408d04.png)
+
+#### Subplot
+
+```r
+par(mfrow=c(2,2))
+hist(mtcars$mpg,col="blue")
+hist(mtcars$wt,col="blue")
+plot(mtcars$mpg,mtcars$wt,main="Car Fuel vs Weight",
+     xlab="Milage per Gallon",ylab="Weight",
+     col = mtcars$cyl,pch=16,cex=3)
+barplot(mtcars$mpg,col="green",
+        main="MPG for 32 cars")     
+```
+![image](https://user-images.githubusercontent.com/43855029/146048487-bfdebb8a-7b58-4129-a341-56abe4125ccc.png)
 
 
 ## Graphics Devices
