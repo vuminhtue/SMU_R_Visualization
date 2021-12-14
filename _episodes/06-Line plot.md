@@ -59,28 +59,47 @@ ax2.set_ylabel("Deaths (thousands)",color="red")
 
 ## Using Seasborn
 
-For seaborn, one can aggregate the plot
+The above data is some how very simple (2 year) so it would be easy to be demonstrated by simple Matplotlib pyplot.
+However, for longer data like Jena Climate data (Kaggle), it would be more useful to use Seaborn for aggregated plotting
 
-First create the separate column for month and year
+Load Jena Climate data:
 
 ```python
-df['month'] = df.date.dt.month
-df['year'] = df.date.dt.year
+df = pd.read_csv("https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/jena_climate_2009_2016.csv?token=AKOSZNKNCAHID3WLUQISB7DBXDAX2")
+df["date"] = pd.to_datetime(df["Date Time"])
+df["month"] = df["date"].dt.month
+df["year"]  = df["date"].dt.year
+df.head(
 ```
 
 ### Plotting with 1 y-axis
-Plot using monthly statistics, the middle continuos line is the mean while the shaded represent 25-75 percentile range of the daily data of the month
+Plot the monthly average temperature data across entire period (8 years), the middle continuos line is the mean while the shaded represent 25-75 percentile range of the daily data of the month
 
 ```python
 %matplotlib notebook
-df['month'] = pd.to_datetime(df.index).month
-sns.lineplot(x="month",y="cases",data=df)
+sns.lineplot("month","T (degC)", data=df)
 ```
+
+![image](https://user-images.githubusercontent.com/43855029/146037269-2d1fa110-78de-4259-a02d-6e86e787cc57.png)
+
 
 ### Plotting with 2 y-axes
+It is very similar to the previous example for 2 y-axes plotting
 
 ```python
 %matplotlib notebook
-df['month'] = pd.to_datetime(df.index).month
-sns.lineplot(x="month",y="cases",data=df)
+
+fig, ax1 = plt.subplots()
+
+ax1 = sns.lineplot(df["month"],df["T (degC)"],data=df)
+ax1.set_title("Monthly Climatology Temperature vs Relative Humidity at Jena station")
+ax1.set_xlabel("Month")
+ax1.set_ylabel("Temperature (oC)")
+plt.xticks(rotation=45)
+
+ax2 = ax1.twinx()
+ax2 = sns.lineplot(df["month"],df["rh (%)"],color="red",linestyle="dashed")
+ax2.set_ylabel("Relative Humidity (%)",color="red")
 ```
+
+![image](https://user-images.githubusercontent.com/43855029/146038072-894175c3-0807-41c4-a8b6-f29495c3e5a3.png)
