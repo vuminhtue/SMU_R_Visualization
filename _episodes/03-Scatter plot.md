@@ -25,7 +25,7 @@ Here are the fuel consumption for different type of cars in miles per gallon (mp
 
 ```python
 import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/mpg.csv?token=AKOSZNPVAEY7GPR2PGOWWVDBW55SG')
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/mpg.csv')
 df.head()
 ```
 
