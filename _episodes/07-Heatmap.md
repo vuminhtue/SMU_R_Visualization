@@ -14,12 +14,12 @@ keypoints:
 
 ```python
 import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/us.csv?token=AKOSZNMCMDFLUIE4C62OVP3BW62LG')
-df.head()
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/jena_climate_2009_2016.csv')
 # Convert the date column from string to datetime type
 df["date"] = pd.to_datetime(df["Date Time"])
 df["month"] = df["date"].dt.month
 df["year"]  = df["date"].dt.year
+df.head()
 ```
 
 Create aggregated data (mean monhtly Temperature):
