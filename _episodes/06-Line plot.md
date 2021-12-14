@@ -14,10 +14,10 @@ keypoints:
 
 ```python
 import pandas as pd
-df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/us.csv?token=AKOSZNMCMDFLUIE4C62OVP3BW62LG')
-df.head()
+df = pd.read_csv('https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/us.csv')
 # Convert the date column from string to datetime type
 df["date"] = pd.to_datetime(df["date"])
+df.head()
 ```
 
 We have loaded covid 19 cases in US for 2020 and 2021.
@@ -65,7 +65,7 @@ However, for longer data like Jena Climate data (Kaggle), it would be more usefu
 Load Jena Climate data:
 
 ```python
-df = pd.read_csv("https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/jena_climate_2009_2016.csv?token=AKOSZNKNCAHID3WLUQISB7DBXDAX2")
+df = pd.read_csv("https://raw.githubusercontent.com/vuminhtue/SMU_Python_Visualization/master/data/jena_climate_2009_2016.csv")
 df["date"] = pd.to_datetime(df["Date Time"])
 df["month"] = df["date"].dt.month
 df["year"]  = df["date"].dt.year
