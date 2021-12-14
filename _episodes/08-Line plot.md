@@ -35,7 +35,7 @@ gp+geom_line()+
   ggtitle("US Covid 19 cases")+
   theme_bw(base_size = 15)
 ```
-![image](https://user-images.githubusercontent.com/43855029/146052085-a68a9c62-b767-4a30-84ef-ae4fb1fb80b6.png)
+![image](https://user-images.githubusercontent.com/43855029/146064800-a0099831-7c7c-42fe-893a-680fa8a49dcb.png)
 
 ## Line plot side by side
 
@@ -61,6 +61,9 @@ p2 <- gp +  geom_line(aes(y=deaths/10^3))+
 library(patchwork) # Thanks to this library
 p1+p2
 ```
+
+![image](https://user-images.githubusercontent.com/43855029/146064760-2e1e6457-67e1-44c4-a411-171fef95c284.png)
+
 
 ## Line plot with 2 axes:
 
